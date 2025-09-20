@@ -1,6 +1,8 @@
 // screens/HomeScreen.js
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from "react-native";
 import SafeScreen from "../components/SafeScreen";
+import ButtonAdd from "../components/ButtonAdd";
+
 
 // dados de exemplo
 const PLACES = [
@@ -26,6 +28,8 @@ export default function HomeScreen({ navigation }) {
         )}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
       />
+
+      <ButtonAdd />
     </SafeScreen>
   );
 }

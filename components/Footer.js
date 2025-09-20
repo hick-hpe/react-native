@@ -32,3 +32,4 @@ const styles = StyleSheet.create({
   },
   btn: { color: "#2b7cff", fontWeight: "700", fontSize: 16 },
 });
+        
