@@ -115,12 +115,10 @@ Android
  ✓ Android Studio - Required for building and installing your app on Android
  ✓ ANDROID_HOME - Environment variable that points to your Android SDK installation
  ✓ Gradlew - Build tool required for Android builds
- ✖ Android SDK - Required for building and installing your app on Android
-   - Versions found: N/A
-   - Version supported: 36.0.0
+ ✓ Android SDK - Required for building and installing your app on Android
 
-Errors:   2
-Warnings: 0
+Errors:   1
+Warnings: 1
 
 Usage
  › Press f to try to fix issues.
@@ -140,15 +138,9 @@ Neste caso:
             ```
         - Linux:
             ```bash
-            export JAVA_HOME=
+            export JAVA_HOME=/usr/lib/jvm/java-<versao>
+            export PATH=$JAVA_HOME/bin:$PATH
             ```
-
-- SDK não encontrado:
-    ```bash
-    set ANDROID_HOME=C:\Users\<seu usuário>\AppData\Local\Android\Sdk
-    set ANDROID_SDK_ROOT=C:\Users\<seu usuário>\AppData\Local\Android\Sdk
-    set PATH=%ANDROID_HOME%\emulator;%ANDROID_HOME%\platform-tools;%ANDROID_SDK_ROOT%\emulator;%ANDROID_SDK_ROOT%\platform-tools;%PATH%
-    ```
 
 ## Rodar no emulador Android
 1. Abra o Android Studio > Tools > AVD Manager > Crie um novo dispositivo virtual (ex.: Pixel 5)
