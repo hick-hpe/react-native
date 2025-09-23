@@ -1,5 +1,11 @@
 # Mini Travel Guide!
 
+## Criação do app
+Para conferir os passos para instalação e criação de um app do zero, segue o passo a passo:
+- [React Native com `Expo`](Tutorial%20com%20Expo.md)
+- [React Native com `CLI`](Tutorial%20com%20React%20Native%20CLI.md)
+
+## Descrição
 Um app simples em **React Native** feito com **Expo** que demonstra **transições de páginas** (stack navigation) e uso de componentes reutilizáveis como `SafeScreen`, `Navbar` e `Footer`.
 
 ## Instalação
