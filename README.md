@@ -39,3 +39,4 @@ Você pode rodar no **emulador Android/iOS** ou escanear o QR Code no celular co
 	  ├── AboutScreen.js  # Tela sobre
 	  └── PlaceScreen.js  # Tela de detalhes de um local
 	App.js                # Configuração de navegação
+
