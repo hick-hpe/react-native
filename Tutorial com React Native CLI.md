@@ -72,12 +72,6 @@ Este tutorial visa ajudar a configurar o ambiente React Native para Android.
     npx react-native run-ios
     ```
 
-<!-- ## Instalar `Expo` e iniciar app
-```bash
-npm install expo
-npx expo start
-``` -->
-
 ## Identificar e corrigir erros:
 ```bash
 npx react-native doctor
