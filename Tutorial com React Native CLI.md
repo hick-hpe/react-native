@@ -4,7 +4,7 @@ Este tutorial visa ajudar a configurar o ambiente React Native para Android.
 
 ## Pré-requisitos
 - [Android studio](https://developer.android.com/studio?hl=pt-br)
-- [Java JDK - versão >= 17 <= 20](https://www.oracle.com/br/java/technologies/downloads/)
+- [Java JDK - compatíveis com versões de 17 a 20](https://www.oracle.com/br/java/technologies/downloads/)
 - [Node.js](https://nodejs.org/pt)
 
 ## Configuração do Android Studio
@@ -37,6 +37,8 @@ Este tutorial visa ajudar a configurar o ambiente React Native para Android.
 
 
 ## Configurar variáveis de ambiente
+
+### Windows
 - Java
     - `JAVA_HOME`: C:\Program Files\Java\jdk-\<versao>
     - Adicione ao `Path`:
@@ -51,6 +53,27 @@ Este tutorial visa ajudar a configurar o ambiente React Native para Android.
         - `%ANDROID_SDK_ROOT%\emulator`
         - `%ANDROID_SDK_ROOT%\platform-tools`
     > Isso permite usar `adb`, emulator e outras ferramentas no terminal.
+
+### Linux
+- Java  
+    Adicione no arquivo `~/.bashrc`, `~/.zshrc` ou similar:
+    ```bash
+    export JAVA_HOME=/usr/lib/jvm/java-<versao>
+    export PATH=$JAVA_HOME/bin:$PATH
+    ```
+- Android Studio  
+    O SDK geralmente fica em `~/Android/Sdk`.  
+    Adicione no mesmo arquivo de configuração do shell:
+    ```bash
+    export ANDROID_HOME=$HOME/Android/Sdk
+    export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+    export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH
+    export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
+    ```
+    > `ANDROID_SDK_ROOT` é recomendado, pois `ANDROID_HOME` está obsoleto.
+
+
+Após configurar as variáveis de ambiente, reinicie o computador. Isso garantirá que elas sejam lidas corretamente.
 
 ## Criar e testar um projeto React Native CLI
 
@@ -73,6 +96,7 @@ Este tutorial visa ajudar a configurar o ambiente React Native para Android.
     ```
 
 ## Identificar e corrigir erros:
+Para verificar se está tudo configurado corretamente, execute:
 ```bash
 npx react-native doctor
 ```
@@ -107,13 +131,18 @@ Usage
 
 Neste caso:
 - Versão diferente do Java instalado:
+    - Instalar em um a pasta separada. Ex: `C:\Program Files\Java\jdk-17`
     - Configurar o `JAVA_HOME` para usar temporariamente a versão suportada pelo projeto (>= 17 <= 20):
-    - Instalar em um a pasgta separada. Ex: `C:\Program Files\Java\jdk-17`
-    - a:
-        ```bash
-        set JAVA_HOME=C:\Program Files\Java\jdk-17.0.12
-        set PATH=%JAVA_HOME%\bin;%PATH%
-        ```
+        - Windows:
+            ```bash
+            set JAVA_HOME=C:\Program Files\Java\jdk-17.0.12
+            set PATH=%JAVA_HOME%\bin;%PATH%
+            ```
+        - Linux:
+            ```bash
+            export JAVA_HOME=
+            ```
+
 - SDK não encontrado:
     ```bash
     set ANDROID_HOME=C:\Users\<seu usuário>\AppData\Local\Android\Sdk
